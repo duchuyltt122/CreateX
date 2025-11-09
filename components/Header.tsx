@@ -3,11 +3,14 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useAuth } from '@/contexts/AuthContext';
 import LanguageSwitcher from './LanguageSwitcher';
+import UserMenu from './UserMenu';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useLanguage();
+  const { user, logout } = useAuth();
 
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
@@ -37,12 +40,24 @@ export default function Header() {
           {/* CTA Button & Language Switcher */}
           <div className="hidden md:flex items-center gap-3 lg:gap-4">
             <LanguageSwitcher />
-            <Link
-              href="/contact"
-              className="px-4 lg:px-8 py-2 lg:py-3 bg-[#FF6B35] text-white text-sm font-medium hover:bg-[#E55A2B] transition-colors rounded-sm"
-            >
-              {t('nav.bookNow')}
-            </Link>
+            {user ? (
+              <UserMenu />
+            ) : (
+              <>
+                <Link
+                  href="/login"
+                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors"
+                >
+                  {t('auth.login')}
+                </Link>
+                <Link
+                  href="/register"
+                  className="px-4 lg:px-6 py-2 bg-[#FF6B35] text-white text-sm font-medium hover:bg-[#E55A2B] transition-colors rounded-sm"
+                >
+                  {t('auth.register')}
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -111,13 +126,47 @@ export default function Header() {
               <div className="pt-2 pb-2 px-2">
                 <LanguageSwitcher />
               </div>
-              <Link
-                href="/contact"
-                className="px-6 py-3 bg-[#FF6B35] text-white text-base font-medium hover:bg-[#E55A2B] transition-colors text-center rounded-sm"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {t('nav.bookNow')}
-              </Link>
+              {user ? (
+                <>
+                  <div className="px-2 py-3 border-t border-gray-200">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 bg-[#FF6B35] text-white rounded-full flex items-center justify-center text-lg font-semibold">
+                        {user.name.charAt(0).toUpperCase()}
+                      </div>
+                      <div>
+                        <p className="font-medium text-gray-900">{user.name}</p>
+                        <p className="text-sm text-gray-500">{user.email}</p>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => {
+                        logout();
+                        setIsMenuOpen(false);
+                      }}
+                      className="w-full px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium hover:bg-gray-200 transition-colors rounded-md"
+                    >
+                      {t('auth.logout')}
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <Link
+                    href="/login"
+                    className="px-6 py-3 bg-white border border-[#FF6B35] text-[#FF6B35] text-base font-medium hover:bg-orange-50 transition-colors text-center rounded-sm"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {t('auth.login')}
+                  </Link>
+                  <Link
+                    href="/register"
+                    className="px-6 py-3 bg-[#FF6B35] text-white text-base font-medium hover:bg-[#E55A2B] transition-colors text-center rounded-sm"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {t('auth.register')}
+                  </Link>
+                </>
+              )}
             </nav>
           </div>
         )}
