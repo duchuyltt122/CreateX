@@ -344,6 +344,18 @@ export const workshops: Workshop[] = [
 // Get all unique categories
 export const categories = Array.from(new Set(workshops.map(w => w.category)));
 
+// Category translations
+export const categoryTranslations: Record<string, { vi: string; en: string }> = {
+  'Weaving': { vi: 'Dệt Lụa', en: 'Silk Weaving' },
+  'Pottery': { vi: 'Gốm Sứ', en: 'Pottery' },
+  'Painting': { vi: 'Hội Họa', en: 'Painting' },
+  'Lantern Making': { vi: 'Làm Đèn Lồng', en: 'Lantern Making' },
+  'Cooking': { vi: 'Nấu Ăn', en: 'Cooking' },
+  'Calligraphy': { vi: 'Thư Pháp', en: 'Calligraphy' },
+  'Embroidery': { vi: 'Thêu Tay', en: 'Embroidery' },
+  'Lacquerware': { vi: 'Sơn Mài', en: 'Lacquerware' }
+};
+
 // Get featured workshops
 export const featuredWorkshops = workshops.filter(w => w.featured);
 

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import WorkshopCard from '@/components/WorkshopCard';
-import { workshops, featuredWorkshops, categories } from '@/lib/data';
+import { workshops, featuredWorkshops, categories, categoryTranslations } from '@/lib/data';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Home() {
@@ -131,7 +131,9 @@ export default function Home() {
               >
                 <option value="all">{t('search.allCategories')}</option>
                 {categories.map(category => (
-                  <option key={category} value={category}>{category}</option>
+                  <option key={category} value={category}>
+                    {categoryTranslations[category]?.[language] || category}
+                  </option>
                 ))}
               </select>
             </div>
