@@ -18,7 +18,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://sf-static.upanhlaylink.com/img/image_202511095e739aabf91be87817d929a854960f9d.jpg"
+            src="https://i.pinimg.com/originals/b4/b2/41/b4b241ef9825ddcae1c583c87de453d3.jpg"
             alt="Vietnamese Traditional Arts"
             className="w-full h-full object-cover opacity-100"
           />
@@ -29,19 +29,21 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 tracking-tight whitespace-pre-line uppercase"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 tracking-tight whitespace-pre-line uppercase"
               style={{
-                color: '#86efac',
-                textShadow: '0 2px 4px rgba(0,0,0,0.8), 0 4px 8px rgba(0,0,0,0.6), 0 8px 16px rgba(0,0,0,0.4), 2px 2px 0 rgba(0,0,0,0.9), -2px -2px 0 rgba(0,0,0,0.9), 2px -2px 0 rgba(0,0,0,0.9), -2px 2px 0 rgba(0,0,0,0.9)'
+                color: '#0fb84dff',
+                WebkitTextStroke: '2px rgba(255,255,255,0.95)',
+                textShadow: '0 4px 12px rgba(0,0,0,0.7), 0 8px 24px rgba(0,0,0,0.5)'
               }}
             >
               {t('hero.title')}
             </h1>
             <p
-              className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 leading-relaxed px-4 font-semibold uppercase"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 leading-relaxed px-4 font-semibold uppercase"
               style={{
-                color: '#86efac',
-                textShadow: '0 2px 4px rgba(0,0,0,0.9), 0 4px 8px rgba(0,0,0,0.7), 2px 2px 0 rgba(0,0,0,0.9), -2px -2px 0 rgba(0,0,0,0.9), 2px -2px 0 rgba(0,0,0,0.9), -2px 2px 0 rgba(0,0,0,0.9)'
+                color: '#ffffffff',
+                WebkitTextStroke: '0px rgba(255,255,255,0.95)',
+                textShadow: '0 3px 10px rgba(0,0,0,0.7), 0 6px 20px rgba(0,0,0,0.5)'
               }}
             >
               {t('hero.subtitle')}

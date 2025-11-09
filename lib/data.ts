@@ -152,8 +152,8 @@ export const workshops: Workshop[] = [
   {
     id: '4',
     title: {
-      vi: 'Làm Đèn Lồng Hội An',
-      en: 'Hoi An Lantern Making'
+      vi: 'Đèn Lồng Hội An',
+      en: 'Hoi An Lantern'
     },
     description: {
       vi: 'Học cách làm đèn lồng Hội An truyền thống với nghệ nhân lành nghề. Bạn sẽ được hướng dẫn từng bước để tạo ra chiếc đèn lồng độc đáo của riêng mình và mang về nhà.',
@@ -349,7 +349,7 @@ export const categoryTranslations: Record<string, { vi: string; en: string }> = 
   'Weaving': { vi: 'Dệt Lụa', en: 'Silk Weaving' },
   'Pottery': { vi: 'Gốm Sứ', en: 'Pottery' },
   'Painting': { vi: 'Hội Họa', en: 'Painting' },
-  'Lantern Making': { vi: 'Làm Đèn Lồng', en: 'Lantern Making' },
+  'Lantern Making': { vi: 'Đèn Lồng', en: 'Lantern' },
   'Cooking': { vi: 'Nấu Ăn', en: 'Cooking' },
   'Calligraphy': { vi: 'Thư Pháp', en: 'Calligraphy' },
   'Embroidery': { vi: 'Thêu Tay', en: 'Embroidery' },
