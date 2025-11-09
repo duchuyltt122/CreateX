@@ -159,7 +159,7 @@ export const workshops: Workshop[] = [
       vi: 'Học cách làm đèn lồng Hội An truyền thống với nghệ nhân lành nghề. Bạn sẽ được hướng dẫn từng bước để tạo ra chiếc đèn lồng độc đáo của riêng mình và mang về nhà.',
       en: 'Learn how to make traditional Hoi An lanterns with skilled artisans. You will be guided step-by-step to create your own unique lantern and take it home.'
     },
-    price: 420000,
+    price: 150000,
     duration: 2,
     location: {
       vi: 'Hội An, Quảng Nam',
@@ -197,7 +197,7 @@ export const workshops: Workshop[] = [
       vi: 'Học nấu các món ăn Việt Nam truyền thống với đầu bếp chuyên nghiệp. Khám phá hương vị ẩm thực Việt và bí quyết nấu nướng.',
       en: 'Learn to cook traditional Vietnamese dishes with professional chefs. Discover Vietnamese culinary flavors and cooking secrets.'
     },
-    price: 650000,
+    price: 250000,
     duration: 3,
     location: {
       vi: 'Hà Nội',
@@ -235,7 +235,7 @@ export const workshops: Workshop[] = [
       vi: 'Khám phá nghệ thuật thư pháp Việt Nam. Học viết chữ Hán và chữ Nôm với nghệ nhân.',
       en: 'Discover the art of Vietnamese calligraphy. Learn to write Chinese characters and Nom script with artisans.'
     },
-    price: 380000,
+    price: 100000,
     duration: 2,
     location: {
       vi: 'Huế',
@@ -273,7 +273,7 @@ export const workshops: Workshop[] = [
       vi: 'Khám phá nghệ thuật thêu tay Việt Nam với các họa tiết truyền thống. Tạo ra tác phẩm thêu độc đáo của riêng bạn.',
       en: 'Discover Vietnamese hand embroidery art with traditional patterns. Create your own unique embroidered masterpiece.'
     },
-    price: 520000,
+    price: 150000,
     duration: 2.5,
     location: {
       vi: 'Huế',
@@ -311,16 +311,16 @@ export const workshops: Workshop[] = [
       vi: 'Học nghệ thuật sơn mài Việt Nam. Tạo ra tác phẩm sơn mài độc đáo với kỹ thuật truyền thống.',
       en: 'Learn Vietnamese lacquerware art. Create unique lacquer pieces with traditional techniques.'
     },
-    price: 680000,
+    price: 175000,
     duration: 3,
     location: {
       vi: 'Hà Nội',
       en: 'Hanoi'
     },
     category: 'Lacquerware',
-    image: 'https://images.unsplash.com/photo-1578926078060-a6c2f1a5e50b?w=800&q=80',
+    image: 'https://langngheviet.com.vn/stores/news_dataimages/2023/112023/22/09/2520231122094041.jpg?rt=20231122094044',
     images: [
-      'https://images.unsplash.com/photo-1578926078060-a6c2f1a5e50b?w=800&q=80',
+      'https://langngheviet.com.vn/stores/news_dataimages/2023/112023/22/09/2520231122094041.jpg?rt=20231122094044',
       'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800&q=80',
       'https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=800&q=80',
       'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=800&q=80'
