@@ -29,10 +29,10 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 tracking-tight whitespace-pre-line uppercase"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 tracking-tight whitespace-pre-line uppercase"
               style={{
                 color: '#0fb84dff',
-                WebkitTextStroke: '2px rgba(255,255,255,0.95)',
+                WebkitTextStroke: '1px rgba(255,255,255,0.95)',
                 textShadow: '0 4px 12px rgba(0,0,0,0.7), 0 8px 24px rgba(0,0,0,0.5)'
               }}
             >

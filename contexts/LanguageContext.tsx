@@ -24,7 +24,7 @@ const translations = {
     // Hero
     'hero.title': 'KHÁM PHÁ Nghệ Thuật\nTruyền Thống Việt Nam',
     'hero.subtitle': 'Trải nghiệm các workshop độc đáo cùng nghệ nhân lành nghề',
-    'hero.cta': 'KHÁM PHÁ Ngay',
+    'hero.cta': 'Khám Phá Ngay',
     
     // Challenges/Programs
     'challenges.title': 'Chương Trình',
