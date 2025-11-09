@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Contact() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -12,7 +14,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for contacting us! We will get back to you soon.');
+    alert(t('contact.success'));
     setFormData({ firstName: '', lastName: '', email: '', message: '' });
   };
 
@@ -30,15 +32,15 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-md p-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
-              Gửi liên lạc với chúng tôi để cập nhật thông tin mới nhất.
+              {t('contact.title')}
             </h1>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Contact us</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('contact.subtitle')}</h2>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
-                    First name*
+                    {t('contact.firstName')}*
                   </label>
                   <input
                     type="text"
@@ -52,7 +54,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
-                    Last name*
+                    {t('contact.lastName')}*
                   </label>
                   <input
                     type="text"
@@ -68,7 +70,7 @@ export default function Contact() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email*
+                  {t('contact.email')}*
                 </label>
                 <input
                   type="email"
@@ -83,7 +85,7 @@ export default function Contact() {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Write a message
+                  {t('contact.message')}
                 </label>
                 <textarea
                   id="message"
@@ -99,7 +101,7 @@ export default function Contact() {
                 type="submit"
                 className="w-full px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-semibold"
               >
-                Submit
+                {t('contact.send')}
               </button>
             </form>
           </div>
@@ -107,7 +109,7 @@ export default function Contact() {
           {/* Contact Information */}
           <div>
             <div className="bg-white rounded-lg shadow-md p-8 mb-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Contact Information</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-6">{t('contact.info')}</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start">

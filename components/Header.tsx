@@ -2,9 +2,12 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
@@ -18,26 +21,27 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-10">
             <Link href="/" className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors">
-              Home
+              {t('nav.home')}
             </Link>
             <Link href="/#services" className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors">
-              Services
+              {t('nav.services')}
             </Link>
             <Link href="/about" className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors">
-              About
+              {t('nav.about')}
             </Link>
             <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors">
-              Contact
+              {t('nav.contact')}
             </Link>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center">
+          {/* CTA Button & Language Switcher */}
+          <div className="hidden md:flex items-center gap-4">
+            <LanguageSwitcher />
             <Link
               href="/contact"
               className="px-8 py-3 bg-[#FF6B35] text-white text-sm font-medium hover:bg-[#E55A2B] transition-colors"
             >
-              Book Now
+              {t('nav.bookNow')}
             </Link>
           </div>
 
@@ -80,35 +84,38 @@ export default function Header() {
                 className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Home
+                {t('nav.home')}
               </Link>
               <Link
                 href="/#services"
                 className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Services
+                {t('nav.services')}
               </Link>
               <Link
                 href="/about"
                 className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                {t('nav.about')}
               </Link>
               <Link
                 href="/contact"
                 className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact
+                {t('nav.contact')}
               </Link>
+              <div className="pt-2">
+                <LanguageSwitcher />
+              </div>
               <Link
                 href="/contact"
                 className="px-8 py-3 bg-[#FF6B35] text-white text-sm font-medium hover:bg-[#E55A2B] transition-colors text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Book Now
+                {t('nav.bookNow')}
               </Link>
             </nav>
           </div>

@@ -1,11 +1,15 @@
+'use client';
+
 import Link from 'next/link';
 import { Workshop } from '@/lib/data';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface WorkshopCardProps {
   workshop: Workshop;
 }
 
 export default function WorkshopCard({ workshop }: WorkshopCardProps) {
+  const { t } = useLanguage();
   return (
     <Link href={`/workshop/${workshop.id}`}>
       <div className="bg-white border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group h-full flex flex-col">
@@ -26,7 +30,7 @@ export default function WorkshopCard({ workshop }: WorkshopCardProps) {
 
           <div className="flex items-center justify-between mb-4">
             <div className="text-sm text-gray-500">
-              <span>{workshop.duration} giờ</span>
+              <span>{workshop.duration} {t('workshop.hours')}</span>
             </div>
             <div className="flex items-center">
               <svg className="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
@@ -44,7 +48,7 @@ export default function WorkshopCard({ workshop }: WorkshopCardProps) {
               <span className="text-sm text-gray-500 ml-1">VND</span>
             </div>
             <div className="px-6 py-2 bg-[#FF6B35] text-white text-sm font-medium hover:bg-[#E55A2B] transition-colors">
-              Đặt Ngay
+              {t('workshop.book')}
             </div>
           </div>
         </div>
