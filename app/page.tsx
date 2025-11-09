@@ -24,7 +24,7 @@ export default function Home() {
               {t('hero.subtitle')}
             </p>
             <Link
-              href="/#services"
+              href="/#all-workshops"
               className="inline-block px-10 py-4 bg-[#FF6B35] text-white text-lg font-medium hover:bg-[#E55A2B] transition-colors"
             >
               {t('hero.cta')}
@@ -99,41 +99,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-50">
+      {/* Search and Filter Section */}
+      <section className="py-12 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-light text-gray-900 mb-4">{t('services.title')}</h2>
-            <p className="text-lg text-gray-600">{t('services.subtitle')}</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredWorkshops.map(workshop => (
-              <WorkshopCard key={workshop.id} workshop={workshop} />
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/#all-workshops"
-              className="inline-block px-8 py-3 border-2 border-[#FF6B35] text-[#FF6B35] font-medium hover:bg-[#FF6B35] hover:text-white transition-colors"
-            >
-              {t('services.viewAll')}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* All Workshops Section */}
-      <section id="all-workshops" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-light text-gray-900 mb-4">{t('workshops.title')}</h2>
-            <p className="text-lg text-gray-600">{t('workshops.subtitle')}</p>
-          </div>
-
-          {/* Search and Filter */}
-          <div className="mb-12 max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row gap-4">
               {/* Search Input */}
               <div className="flex-1 relative">
@@ -166,6 +135,16 @@ export default function Home() {
                 ))}
               </select>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* All Workshops Section */}
+      <section id="all-workshops" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-light text-gray-900 mb-4">{t('workshops.title')}</h2>
+            <p className="text-lg text-gray-600">{t('workshops.subtitle')}</p>
           </div>
 
           {/* Filtered Workshops */}

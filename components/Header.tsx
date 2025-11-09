@@ -23,7 +23,7 @@ export default function Header() {
             <Link href="/" className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors">
               {t('nav.home')}
             </Link>
-            <Link href="/#services" className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors">
+            <Link href="/services" className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors">
               {t('nav.services')}
             </Link>
             <Link href="/about" className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors">
@@ -87,7 +87,7 @@ export default function Header() {
                 {t('nav.home')}
               </Link>
               <Link
-                href="/#services"
+                href="/services"
                 className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
