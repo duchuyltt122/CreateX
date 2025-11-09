@@ -14,8 +14,19 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gray-100 py-16 sm:py-20 md:py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gray-100 py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://sf-static.upanhlaylink.com/img/image_202511095e739aabf91be87817d929a854960f9d.jpg"
+            alt="Vietnamese Traditional Arts"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-white/60"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-4 sm:mb-6 tracking-tight whitespace-pre-line">
               {t('hero.title')}
@@ -25,7 +36,7 @@ export default function Home() {
             </p>
             <Link
               href="/#all-workshops"
-              className="inline-block px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-[#FF6B35] text-white text-base sm:text-lg font-medium hover:bg-[#E55A2B] transition-colors rounded-sm"
+              className="inline-block px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-[#FF6B35] text-white text-base sm:text-lg font-medium hover:bg-[#E55A2B] transition-colors rounded-sm shadow-lg hover:shadow-xl"
             >
               {t('hero.cta')}
             </Link>
