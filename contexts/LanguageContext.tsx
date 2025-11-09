@@ -26,6 +26,19 @@ const translations = {
     'hero.subtitle': 'Trải nghiệm các workshop độc đáo cùng nghệ nhân lành nghề',
     'hero.cta': 'Khám Phá Ngay',
     
+    // Challenges/Programs
+    'challenges.title': 'Chương Trình',
+    'challenges.subtitle': 'Tham gia các chương trình đặc biệt của chúng tôi để nâng cao kỹ năng và khám phá nghệ thuật truyền thống',
+    'challenges.program1.title': 'Thử Thách Nghệ Thuật',
+    'challenges.program1.description': 'Tham gia thử thách 30 ngày để học và thực hành các kỹ thuật nghệ thuật truyền thống. Hoàn thành để nhận chứng chỉ.',
+    'challenges.program1.duration': '30 ngày',
+    'challenges.program2.title': 'Chương Trình Nghệ Nhân',
+    'challenges.program2.description': 'Chương trình đào tạo chuyên sâu 3 tháng với nghệ nhân để trở thành chuyên gia trong lĩnh vực bạn chọn.',
+    'challenges.program2.duration': '3 tháng',
+    'challenges.program3.title': 'Workshop Cuối Tuần',
+    'challenges.program3.description': 'Các workshop ngắn hạn vào cuối tuần để trải nghiệm nhanh các nghệ thuật truyền thống khác nhau.',
+    'challenges.program3.duration': '2-3 giờ',
+
     // Services
     'services.title': 'Dịch Vụ Của Chúng Tôi',
     'services.subtitle': 'Trải nghiệm các workshop độc đáo',
@@ -100,6 +113,19 @@ const translations = {
     'hero.subtitle': 'Experience unique workshops with skilled artisans',
     'hero.cta': 'Explore Now',
     
+    // Challenges/Programs
+    'challenges.title': 'Programs',
+    'challenges.subtitle': 'Join our special programs to enhance your skills and discover traditional arts',
+    'challenges.program1.title': 'Art Challenge',
+    'challenges.program1.description': 'Join the 30-day challenge to learn and practice traditional art techniques. Complete to receive a certificate.',
+    'challenges.program1.duration': '30 days',
+    'challenges.program2.title': 'Artisan Program',
+    'challenges.program2.description': 'Intensive 3-month training program with artisans to become an expert in your chosen field.',
+    'challenges.program2.duration': '3 months',
+    'challenges.program3.title': 'Weekend Workshop',
+    'challenges.program3.description': 'Short weekend workshops to quickly experience different traditional arts.',
+    'challenges.program3.duration': '2-3 hours',
+
     // Services
     'services.title': 'Our Services',
     'services.subtitle': 'Experience unique workshops',

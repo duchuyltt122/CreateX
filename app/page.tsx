@@ -30,8 +30,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Challenges/Programs Section */}
+      <section id="challenges" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-gray-900 mb-4">{t('challenges.title')}</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t('challenges.subtitle')}</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Challenge 1 */}
+            <div className="bg-gray-50 overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="h-64 bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center">
+                <span className="text-8xl">🎨</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-medium text-gray-900 mb-3">{t('challenges.program1.title')}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  {t('challenges.program1.description')}
+                </p>
+                <div className="text-[#FF6B35] font-medium">{t('challenges.program1.duration')}</div>
+              </div>
+            </div>
+
+            {/* Challenge 2 */}
+            <div className="bg-gray-50 overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="h-64 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                <span className="text-8xl">🏺</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-medium text-gray-900 mb-3">{t('challenges.program2.title')}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  {t('challenges.program2.description')}
+                </p>
+                <div className="text-[#FF6B35] font-medium">{t('challenges.program2.duration')}</div>
+              </div>
+            </div>
+
+            {/* Challenge 3 */}
+            <div className="bg-gray-50 overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="h-64 bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center">
+                <span className="text-8xl">🖌️</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-medium text-gray-900 mb-3">{t('challenges.program3.title')}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  {t('challenges.program3.description')}
+                </p>
+                <div className="text-[#FF6B35] font-medium">{t('challenges.program3.duration')}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
-      <section id="services" className="py-20 bg-white">
+      <section id="services" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-light text-gray-900 mb-4">{t('services.title')}</h2>
@@ -56,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* All Workshops Section */}
-      <section id="all-workshops" className="py-20 bg-gray-50">
+      <section id="all-workshops" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-light text-gray-900 mb-4">{t('workshops.title')}</h2>
