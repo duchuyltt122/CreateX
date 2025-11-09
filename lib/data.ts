@@ -45,16 +45,16 @@ export const workshops: Workshop[] = [
       vi: 'Trải nghiệm nghệ thuật dệt lụa truyền thống tại Hội An. Tìm hiểu quy trình từ nuôi tằm đến dệt vải. Bạn sẽ được hướng dẫn bởi các nghệ nhân lành nghề và tự tay tạo ra sản phẩm lụa của riêng mình.',
       en: 'Experience the traditional art of silk weaving in Hoi An. Learn the process from silkworm cultivation to fabric weaving. You will be guided by skilled artisans and create your own silk product.'
     },
-    price: 750000,
+    price: 500000,
     duration: 3,
     location: {
       vi: 'Hội An, Quảng Nam',
       en: 'Hoi An, Quang Nam'
     },
     category: 'Weaving',
-    image: 'https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80',
+    image: 'https://static.vinwonders.com/2022/03/lang-lua-hoi-an-11.jpg',
     images: [
-      'https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80',
+      'https://static.vinwonders.com/2022/03/lang-lua-hoi-an-11.jpg',
       'https://images.unsplash.com/photo-1558769132-cb1aea3c8565?w=800&q=80',
       'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80',
       'https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=800&q=80'
@@ -76,23 +76,23 @@ export const workshops: Workshop[] = [
   {
     id: '2',
     title: {
-      vi: 'Gốm Đà Nẵng',
-      en: 'Da Nang Pottery'
+      vi: 'Gốm Thanh Hà',
+      en: 'Thanh Ha Pottery'
     },
     description: {
-      vi: 'Khám phá nghệ thuật làm gốm truyền thống Đà Nẵng. Tự tay nặn và trang trí sản phẩm gốm của riêng bạn dưới sự hướng dẫn của nghệ nhân. Tìm hiểu về lịch sử và kỹ thuật làm gốm độc đáo của vùng đất này.',
-      en: 'Discover the traditional pottery art of Da Nang. Hand-mold and decorate your own ceramic product under the guidance of artisans. Learn about the history and unique pottery techniques of this region.'
+      vi: 'Khám phá nghệ thuật làm gốm truyền thống Thanh Hà. Tự tay nặn và trang trí sản phẩm gốm của riêng bạn dưới sự hướng dẫn của nghệ nhân. Tìm hiểu về lịch sử và kỹ thuật làm gốm độc đáo của vùng đất này.',
+      en: 'Discover the traditional pottery art of Thanh Ha. Hand-mold and decorate your own ceramic product under the guidance of artisans. Learn about the history and unique pottery techniques of this region.'
     },
-    price: 550000,
+    price: 50000,
     duration: 2.5,
     location: {
-      vi: 'Đà Nẵng',
-      en: 'Da Nang'
+      vi: 'Hội An, Quảng Nam',
+      en: 'Hoi An, Quang Nam'
     },
     category: 'Pottery',
-    image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80',
+    image: 'https://dulichconvoi.com/wp-content/uploads/2023/03/gom-thanh-ha-1.jpg',
     images: [
-      'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80',
+      'https://dulichconvoi.com/wp-content/uploads/2023/03/gom-thanh-ha-1.jpg',
       'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80',
       'https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=800&q=80',
       'https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?w=800&q=80'
@@ -100,8 +100,8 @@ export const workshops: Workshop[] = [
     artisan: {
       name: 'Nguyễn Văn Minh',
       bio: {
-        vi: 'Nghệ nhân gốm sứ với 18 năm kinh nghiệm tại Đà Nẵng',
-        en: 'Pottery artisan with 18 years of experience in Da Nang'
+        vi: 'Nghệ nhân gốm sứ với 18 năm kinh nghiệm tại Thanh Hà',
+        en: 'Pottery artisan with 18 years of experience in Thanh Ha'
       },
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80'
     },
@@ -121,7 +121,7 @@ export const workshops: Workshop[] = [
       vi: 'Học vẽ tranh dân gian Đông Hồ với nghệ nhân. Tìm hiểu về lịch sử, ý nghĩa và kỹ thuật vẽ tranh truyền thống. Tạo ra tác phẩm tranh Đông Hồ độc đáo mang đậm bản sắc văn hóa Việt Nam.',
       en: 'Learn to paint Dong Ho folk paintings with artisans. Discover the history, meaning, and traditional painting techniques. Create your own unique Dong Ho painting rich in Vietnamese cultural identity.'
     },
-    price: 480000,
+    price: 250000,
     duration: 2,
     location: {
       vi: 'Bắc Ninh',
@@ -166,9 +166,9 @@ export const workshops: Workshop[] = [
       en: 'Hoi An, Quang Nam'
     },
     category: 'Lantern Making',
-    image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80',
+    image: 'https://suoiluong.com.vn/wp-content/uploads/2024/08/lang-nghe-lam-den-long-pho-co-hoi-an.jpg',
     images: [
-      'https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80',
+      'https://suoiluong.com.vn/wp-content/uploads/2024/08/lang-nghe-lam-den-long-pho-co-hoi-an.jpg',
       'https://images.unsplash.com/photo-1583470790878-4a0b42c62cbd?w=800&q=80',
       'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80',
       'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80'
@@ -242,9 +242,9 @@ export const workshops: Workshop[] = [
       en: 'Hue'
     },
     category: 'Calligraphy',
-    image: 'https://images.unsplash.com/photo-1604869515882-4d10fa4b0492?w=800&q=80',
+    image: 'https://anh.24h.com.vn/upload/news/2013-01-31/1359601491-hot-girl-nhat-19.jpg',
     images: [
-      'https://images.unsplash.com/photo-1604869515882-4d10fa4b0492?w=800&q=80',
+      'https://anh.24h.com.vn/upload/news/2013-01-31/1359601491-hot-girl-nhat-19.jpg',
       'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80',
       'https://images.unsplash.com/photo-1609743522653-52354461eb27?w=800&q=80',
       'https://images.unsplash.com/photo-1516534775068-ba3e7458af70?w=800&q=80'
