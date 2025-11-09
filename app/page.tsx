@@ -29,7 +29,7 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 tracking-tight whitespace-pre-line"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 tracking-tight whitespace-pre-line uppercase"
               style={{
                 color: '#86efac',
                 textShadow: '0 2px 4px rgba(0,0,0,0.8), 0 4px 8px rgba(0,0,0,0.6), 0 8px 16px rgba(0,0,0,0.4), 2px 2px 0 rgba(0,0,0,0.9), -2px -2px 0 rgba(0,0,0,0.9), 2px -2px 0 rgba(0,0,0,0.9), -2px 2px 0 rgba(0,0,0,0.9)'
@@ -38,7 +38,7 @@ export default function Home() {
               {t('hero.title')}
             </h1>
             <p
-              className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 leading-relaxed px-4 font-semibold"
+              className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 leading-relaxed px-4 font-semibold uppercase"
               style={{
                 color: '#86efac',
                 textShadow: '0 2px 4px rgba(0,0,0,0.9), 0 4px 8px rgba(0,0,0,0.7), 2px 2px 0 rgba(0,0,0,0.9), -2px -2px 0 rgba(0,0,0,0.9), 2px -2px 0 rgba(0,0,0,0.9), -2px 2px 0 rgba(0,0,0,0.9)'
