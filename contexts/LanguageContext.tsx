@@ -81,7 +81,7 @@ const translations = {
     'about.qualityTitle': 'Chất Lượng',
     'about.qualityDesc': 'Mỗi workshop được tuyển chọn kỹ lưỡng để đảm bảo trải nghiệm học tập xuất sắc',
     'about.storyTitle': 'Câu Chuyện Của Chúng Tôi',
-    'about.story1': 'CreateX được thành lập vào năm 2020 với tầm nhìn đơn giản: làm cho các nghề thủ công truyền thống Việt Nam trở nên dễ tiếp cận với mọi người. Những gì bắt đầu như một sáng kiến nhỏ để kết nối một số nghệ nhân với những người học háo hức đã phát triển thành nền tảng đặt workshop hàng đầu Việt Nam.',
+    'about.story1': 'CreateX được thành lập vào năm 2025 với tầm nhìn đơn giản: làm cho các nghề thủ công truyền thống Việt Nam trở nên dễ tiếp cận với mọi người. Những gì bắt đầu như một sáng kiến nhỏ để kết nối một số nghệ nhân với những người học háo hức đã phát triển thành nền tảng đặt workshop hàng đầu Việt Nam.',
     'about.story2': 'Ngày nay, chúng tôi hợp tác với các nghệ nhân bậc thầy trên khắp đất nước, từ những người làm đèn lồng ở Hội An đến những bậc thầy gốm ở Bát Tràng, mang đến cơ hội độc đáo để học các kỹ thuật lâu đời trong môi trường chính thống.',
     'about.story3': 'Hãy cùng chúng tôi tôn vinh và bảo tồn di sản văn hóa phong phú của Việt Nam, từng workshop một.',
     'about.ctaTitle': 'Bắt Đầu Hành Trình Của Bạn',

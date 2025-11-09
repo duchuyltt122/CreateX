@@ -128,9 +128,9 @@ export const workshops: Workshop[] = [
       en: 'Bac Ninh'
     },
     category: 'Painting',
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80',
+    image: 'https://mythuatms.com/image/data/HUONG%20LY/MY%20THUAT%20CN/nghe%20thuat%20va%20triet%20ly%20cua%20tranh%20Dong%20Ho/tranh-dong-ho-2.webp',
     images: [
-      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80',
+      'https://mythuatms.com/image/data/HUONG%20LY/MY%20THUAT%20CN/nghe%20thuat%20va%20triet%20ly%20cua%20tranh%20Dong%20Ho/tranh-dong-ho-2.webp',
       'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&q=80',
       'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&q=80',
       'https://images.unsplash.com/photo-1596548438137-d51ea5c83ca5?w=800&q=80'
