@@ -10,16 +10,16 @@ export default function Header() {
   const { t } = useLanguage();
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16 sm:h-18 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <h1 className="text-3xl font-light tracking-wide text-gray-900">CreateX</h1>
+            <h1 className="text-2xl sm:text-2xl md:text-3xl font-light tracking-wide text-gray-900">CreateX</h1>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-10">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-10">
             <Link href="/" className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors">
               {t('nav.home')}
             </Link>
@@ -35,11 +35,11 @@ export default function Header() {
           </nav>
 
           {/* CTA Button & Language Switcher */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3 lg:gap-4">
             <LanguageSwitcher />
             <Link
               href="/contact"
-              className="px-8 py-3 bg-[#FF6B35] text-white text-sm font-medium hover:bg-[#E55A2B] transition-colors"
+              className="px-4 lg:px-8 py-2 lg:py-3 bg-[#FF6B35] text-white text-sm font-medium hover:bg-[#E55A2B] transition-colors rounded-sm"
             >
               {t('nav.bookNow')}
             </Link>
@@ -47,8 +47,9 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 hover:bg-gray-100 rounded-md transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
             <svg
               className="w-6 h-6"
@@ -77,42 +78,42 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t">
-            <nav className="flex flex-col space-y-4">
+          <div className="md:hidden py-4 border-t border-gray-200 bg-white">
+            <nav className="flex flex-col space-y-3">
               <Link
                 href="/"
-                className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors"
+                className="text-base font-medium text-gray-700 hover:text-[#FF6B35] transition-colors py-2 px-2 hover:bg-gray-50 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('nav.home')}
               </Link>
               <Link
                 href="/services"
-                className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors"
+                className="text-base font-medium text-gray-700 hover:text-[#FF6B35] transition-colors py-2 px-2 hover:bg-gray-50 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('nav.services')}
               </Link>
               <Link
                 href="/about"
-                className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors"
+                className="text-base font-medium text-gray-700 hover:text-[#FF6B35] transition-colors py-2 px-2 hover:bg-gray-50 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('nav.about')}
               </Link>
               <Link
                 href="/contact"
-                className="text-sm font-medium text-gray-700 hover:text-[#FF6B35] transition-colors"
+                className="text-base font-medium text-gray-700 hover:text-[#FF6B35] transition-colors py-2 px-2 hover:bg-gray-50 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('nav.contact')}
               </Link>
-              <div className="pt-2">
+              <div className="pt-2 pb-2 px-2">
                 <LanguageSwitcher />
               </div>
               <Link
                 href="/contact"
-                className="px-8 py-3 bg-[#FF6B35] text-white text-sm font-medium hover:bg-[#E55A2B] transition-colors text-center"
+                className="px-6 py-3 bg-[#FF6B35] text-white text-base font-medium hover:bg-[#E55A2B] transition-colors text-center rounded-sm"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('nav.bookNow')}

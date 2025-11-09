@@ -14,18 +14,18 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gray-100 py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="relative bg-gray-100 py-16 sm:py-20 md:py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-light text-gray-900 mb-6 tracking-tight whitespace-pre-line">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-4 sm:mb-6 tracking-tight whitespace-pre-line">
               {t('hero.title')}
             </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed px-4">
               {t('hero.subtitle')}
             </p>
             <Link
               href="/#all-workshops"
-              className="inline-block px-10 py-4 bg-[#FF6B35] text-white text-lg font-medium hover:bg-[#E55A2B] transition-colors"
+              className="inline-block px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-[#FF6B35] text-white text-base sm:text-lg font-medium hover:bg-[#E55A2B] transition-colors rounded-sm"
             >
               {t('hero.cta')}
             </Link>
@@ -34,65 +34,65 @@ export default function Home() {
       </section>
 
       {/* Challenges/Programs Section */}
-      <section id="challenges" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-light text-gray-900 mb-4">{t('challenges.title')}</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t('challenges.subtitle')}</p>
+      <section id="challenges" className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-900 mb-3 sm:mb-4 px-4">{t('challenges.title')}</h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">{t('challenges.subtitle')}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Challenge 1 */}
-            <div className="bg-white overflow-hidden hover:shadow-lg transition-shadow border border-gray-100">
-              <div className="h-64 overflow-hidden">
+            <div className="bg-white overflow-hidden hover:shadow-lg transition-shadow border border-gray-100 rounded-sm">
+              <div className="h-48 sm:h-56 md:h-64 overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&q=80"
                   alt="Art Challenge"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-medium text-gray-900 mb-3">{t('challenges.program1.title')}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+              <div className="p-4 sm:p-5 md:p-6">
+                <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-2 sm:mb-3">{t('challenges.program1.title')}</h3>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-3 sm:mb-4">
                   {t('challenges.program1.description')}
                 </p>
-                <div className="text-[#FF6B35] font-medium">{t('challenges.program1.duration')}</div>
+                <div className="text-[#FF6B35] font-medium text-sm sm:text-base">{t('challenges.program1.duration')}</div>
               </div>
             </div>
 
             {/* Challenge 2 */}
-            <div className="bg-white overflow-hidden hover:shadow-lg transition-shadow border border-gray-100">
-              <div className="h-64 overflow-hidden">
+            <div className="bg-white overflow-hidden hover:shadow-lg transition-shadow border border-gray-100 rounded-sm">
+              <div className="h-48 sm:h-56 md:h-64 overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80"
                   alt="Artisan Program"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-medium text-gray-900 mb-3">{t('challenges.program2.title')}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+              <div className="p-4 sm:p-5 md:p-6">
+                <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-2 sm:mb-3">{t('challenges.program2.title')}</h3>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-3 sm:mb-4">
                   {t('challenges.program2.description')}
                 </p>
-                <div className="text-[#FF6B35] font-medium">{t('challenges.program2.duration')}</div>
+                <div className="text-[#FF6B35] font-medium text-sm sm:text-base">{t('challenges.program2.duration')}</div>
               </div>
             </div>
 
             {/* Challenge 3 */}
-            <div className="bg-white overflow-hidden hover:shadow-lg transition-shadow border border-gray-100">
-              <div className="h-64 overflow-hidden">
+            <div className="bg-white overflow-hidden hover:shadow-lg transition-shadow border border-gray-100 rounded-sm">
+              <div className="h-48 sm:h-56 md:h-64 overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80"
                   alt="Weekend Workshop"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-medium text-gray-900 mb-3">{t('challenges.program3.title')}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+              <div className="p-4 sm:p-5 md:p-6">
+                <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-2 sm:mb-3">{t('challenges.program3.title')}</h3>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-3 sm:mb-4">
                   {t('challenges.program3.description')}
                 </p>
-                <div className="text-[#FF6B35] font-medium">{t('challenges.program3.duration')}</div>
+                <div className="text-[#FF6B35] font-medium text-sm sm:text-base">{t('challenges.program3.duration')}</div>
               </div>
             </div>
           </div>
@@ -100,10 +100,10 @@ export default function Home() {
       </section>
 
       {/* Search and Filter Section */}
-      <section className="py-12 bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="py-8 sm:py-10 md:py-12 bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               {/* Search Input */}
               <div className="flex-1 relative">
                 <input
@@ -111,10 +111,10 @@ export default function Home() {
                   placeholder={t('search.placeholder')}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-5 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent"
+                  className="w-full px-4 sm:px-5 py-2.5 sm:py-3 pl-10 sm:pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent text-sm sm:text-base"
                 />
                 <svg
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
+                  className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-gray-400"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -127,7 +127,7 @@ export default function Home() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent bg-white"
+                className="w-full sm:w-auto px-4 sm:px-5 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent bg-white text-sm sm:text-base"
               >
                 <option value="all">{t('search.allCategories')}</option>
                 {categories.map(category => (
@@ -142,15 +142,15 @@ export default function Home() {
       </section>
 
       {/* All Workshops Section */}
-      <section id="all-workshops" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-light text-gray-900 mb-4">{t('workshops.title')}</h2>
-            <p className="text-lg text-gray-600">{t('workshops.subtitle')}</p>
+      <section id="all-workshops" className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-900 mb-3 sm:mb-4 px-4">{t('workshops.title')}</h2>
+            <p className="text-base sm:text-lg text-gray-600 px-4">{t('workshops.subtitle')}</p>
           </div>
 
           {/* Filtered Workshops */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
             {workshops
               .filter(workshop => {
                 const matchesSearch =
@@ -187,24 +187,24 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-[#FF6B35] text-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <section className="py-12 sm:py-14 md:py-16 bg-[#FF6B35] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
             <div>
-              <div className="text-5xl font-light mb-2">500+</div>
-              <div className="text-lg opacity-90">{t('stats.workshops')}</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-light mb-1 sm:mb-2">500+</div>
+              <div className="text-sm sm:text-base md:text-lg opacity-90">{t('stats.workshops')}</div>
             </div>
             <div>
-              <div className="text-5xl font-light mb-2">100+</div>
-              <div className="text-lg opacity-90">{t('stats.artisans')}</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-light mb-1 sm:mb-2">100+</div>
+              <div className="text-sm sm:text-base md:text-lg opacity-90">{t('stats.artisans')}</div>
             </div>
             <div>
-              <div className="text-5xl font-light mb-2">10,000+</div>
-              <div className="text-lg opacity-90">{t('stats.students')}</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-light mb-1 sm:mb-2">10,000+</div>
+              <div className="text-sm sm:text-base md:text-lg opacity-90">{t('stats.students')}</div>
             </div>
             <div>
-              <div className="text-5xl font-light mb-2">50+</div>
-              <div className="text-lg opacity-90">{t('stats.locations')}</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-light mb-1 sm:mb-2">50+</div>
+              <div className="text-sm sm:text-base md:text-lg opacity-90">{t('stats.locations')}</div>
             </div>
           </div>
         </div>
