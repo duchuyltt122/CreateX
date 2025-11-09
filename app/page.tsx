@@ -40,9 +40,13 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Challenge 1 */}
-            <div className="bg-gray-50 overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-64 bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center">
-                <span className="text-8xl">🎨</span>
+            <div className="bg-white overflow-hidden hover:shadow-lg transition-shadow border border-gray-100">
+              <div className="h-64 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&q=80"
+                  alt="Art Challenge"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-medium text-gray-900 mb-3">{t('challenges.program1.title')}</h3>
@@ -54,9 +58,13 @@ export default function Home() {
             </div>
 
             {/* Challenge 2 */}
-            <div className="bg-gray-50 overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-64 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
-                <span className="text-8xl">🏺</span>
+            <div className="bg-white overflow-hidden hover:shadow-lg transition-shadow border border-gray-100">
+              <div className="h-64 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80"
+                  alt="Artisan Program"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-medium text-gray-900 mb-3">{t('challenges.program2.title')}</h3>
@@ -68,9 +76,13 @@ export default function Home() {
             </div>
 
             {/* Challenge 3 */}
-            <div className="bg-gray-50 overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-64 bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center">
-                <span className="text-8xl">🖌️</span>
+            <div className="bg-white overflow-hidden hover:shadow-lg transition-shadow border border-gray-100">
+              <div className="h-64 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80"
+                  alt="Weekend Workshop"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-medium text-gray-900 mb-3">{t('challenges.program3.title')}</h3>

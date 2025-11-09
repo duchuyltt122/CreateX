@@ -51,14 +51,14 @@ export const workshops: Workshop[] = [
       en: 'Hoi An, Quang Nam'
     },
     category: 'Weaving',
-    image: '/workshops/weaving.jpg',
+    image: 'https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80',
     artisan: {
       name: 'Võ Thị Lan',
       bio: {
         vi: 'Nghệ nhân dệt lụa đời thứ 5 tại Hội An với hơn 25 năm kinh nghiệm',
         en: '5th generation silk weaving artisan in Hoi An with over 25 years of experience'
       },
-      avatar: '/artisans/vo-thi-lan.jpg'
+      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80'
     },
     rating: 4.9,
     reviewCount: 142,
@@ -83,14 +83,14 @@ export const workshops: Workshop[] = [
       en: 'Da Nang'
     },
     category: 'Pottery',
-    image: '/workshops/pottery.jpg',
+    image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80',
     artisan: {
       name: 'Nguyễn Văn Minh',
       bio: {
         vi: 'Nghệ nhân gốm sứ với 18 năm kinh nghiệm tại Đà Nẵng',
         en: 'Pottery artisan with 18 years of experience in Da Nang'
       },
-      avatar: '/artisans/nguyen-van-minh.jpg'
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80'
     },
     rating: 4.8,
     reviewCount: 98,
@@ -115,14 +115,14 @@ export const workshops: Workshop[] = [
       en: 'Bac Ninh'
     },
     category: 'Painting',
-    image: '/workshops/painting.jpg',
+    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80',
     artisan: {
       name: 'Nguyễn Đăng Chế',
       bio: {
         vi: 'Nghệ nhân tranh Đông Hồ đời thứ 4, giữ gìn nghề truyền thống',
         en: '4th generation Dong Ho painting artisan, preserving traditional craft'
       },
-      avatar: '/artisans/nguyen-dang-che.jpg'
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80'
     },
     rating: 4.7,
     reviewCount: 76,
@@ -147,14 +147,14 @@ export const workshops: Workshop[] = [
       en: 'Hoi An, Quang Nam'
     },
     category: 'Lantern Making',
-    image: '/workshops/lantern-making.jpg',
+    image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80',
     artisan: {
       name: 'Trần Thị Hoa',
       bio: {
         vi: 'Nghệ nhân làm đèn lồng với hơn 20 năm kinh nghiệm',
         en: 'Lantern making artisan with over 20 years of experience'
       },
-      avatar: '/artisans/tran-thi-hoa.jpg'
+      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80'
     },
     rating: 4.9,
     reviewCount: 187,
@@ -179,14 +179,14 @@ export const workshops: Workshop[] = [
       en: 'Hanoi'
     },
     category: 'Culinary',
-    image: '/workshops/cooking.jpg',
+    image: 'https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=800&q=80',
     artisan: {
       name: 'Phạm Thị Mai',
       bio: {
         vi: 'Đầu bếp với 25 năm kinh nghiệm ẩm thực Việt',
         en: 'Chef with 25 years of Vietnamese culinary experience'
       },
-      avatar: '/artisans/pham-thu-ha.jpg'
+      avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80'
     },
     rating: 4.9,
     reviewCount: 203,
@@ -211,14 +211,14 @@ export const workshops: Workshop[] = [
       en: 'Hue'
     },
     category: 'Calligraphy',
-    image: '/workshops/calligraphy.jpg',
+    image: 'https://images.unsplash.com/photo-1604869515882-4d10fa4b0492?w=800&q=80',
     artisan: {
       name: 'Võ Minh Đức',
       bio: {
         vi: 'Nghệ nhân thư pháp với 30 năm kinh nghiệm',
         en: 'Calligraphy artisan with 30 years of experience'
       },
-      avatar: '/artisans/vo-minh-duc.jpg'
+      avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80'
     },
     rating: 4.8,
     reviewCount: 78,
@@ -243,14 +243,14 @@ export const workshops: Workshop[] = [
       en: 'Hue'
     },
     category: 'Embroidery',
-    image: '/workshops/embroidery.jpg',
+    image: 'https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=800&q=80',
     artisan: {
       name: 'Lê Thị Hương',
       bio: {
         vi: 'Chuyên gia thêu tay với 15 năm kinh nghiệm',
         en: 'Hand embroidery expert with 15 years of experience'
       },
-      avatar: '/artisans/le-thi-huong.jpg'
+      avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80'
     },
     rating: 4.7,
     reviewCount: 91,
@@ -275,14 +275,14 @@ export const workshops: Workshop[] = [
       en: 'Hanoi'
     },
     category: 'Lacquerware',
-    image: '/workshops/lacquerware.jpg',
+    image: 'https://images.unsplash.com/photo-1578926078060-a6c2f1a5e50b?w=800&q=80',
     artisan: {
       name: 'Đặng Văn Hùng',
       bio: {
         vi: 'Nghệ nhân sơn mài với 20 năm kinh nghiệm',
         en: 'Lacquerware artisan with 20 years of experience'
       },
-      avatar: '/artisans/bui-van-thanh.jpg'
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80'
     },
     rating: 4.8,
     reviewCount: 124,
