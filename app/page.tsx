@@ -20,23 +20,35 @@ export default function Home() {
           <img
             src="https://sf-static.upanhlaylink.com/img/image_202511095e739aabf91be87817d929a854960f9d.jpg"
             alt="Vietnamese Traditional Arts"
-            className="w-full h-full object-cover opacity-50"
+            className="w-full h-full object-cover opacity-100"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/20 to-white/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white/10 to-white/20"></div>
         </div>
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-4 sm:mb-6 tracking-tight whitespace-pre-line">
+            <h1
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 tracking-tight whitespace-pre-line"
+              style={{
+                color: '#86efac',
+                textShadow: '0 2px 4px rgba(0,0,0,0.8), 0 4px 8px rgba(0,0,0,0.6), 0 8px 16px rgba(0,0,0,0.4), 2px 2px 0 rgba(0,0,0,0.9), -2px -2px 0 rgba(0,0,0,0.9), 2px -2px 0 rgba(0,0,0,0.9), -2px 2px 0 rgba(0,0,0,0.9)'
+              }}
+            >
               {t('hero.title')}
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed px-4">
+            <p
+              className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 leading-relaxed px-4 font-semibold"
+              style={{
+                color: '#86efac',
+                textShadow: '0 2px 4px rgba(0,0,0,0.9), 0 4px 8px rgba(0,0,0,0.7), 2px 2px 0 rgba(0,0,0,0.9), -2px -2px 0 rgba(0,0,0,0.9), 2px -2px 0 rgba(0,0,0,0.9), -2px 2px 0 rgba(0,0,0,0.9)'
+              }}
+            >
               {t('hero.subtitle')}
             </p>
             <Link
               href="/#all-workshops"
-              className="inline-block px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-[#FF6B35] text-white text-base sm:text-lg font-medium hover:bg-[#E55A2B] transition-colors rounded-sm shadow-lg hover:shadow-xl"
+              className="inline-block px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-[#FF6B35] text-white text-base sm:text-lg font-bold hover:bg-[#E55A2B] transition-all rounded-sm shadow-2xl hover:shadow-[0_10px_40px_rgba(255,107,53,0.6)] hover:scale-105 transform"
             >
               {t('hero.cta')}
             </Link>
