@@ -145,7 +145,7 @@ export default function Contact() {
                   </div>
                   <div className="ml-4">
                     <p className="text-sm font-medium text-gray-900">Address</p>
-                    <p className="text-gray-600">Số 6 Tô Hiến Thành, phường Hà Cầu, Quận Hà Đông</p>
+                    <p className="text-gray-600">64 Đ Tạ Hiện, phường Hải Châu, TP. Đà Nẵng</p>
                   </div>
                 </div>
               </div>

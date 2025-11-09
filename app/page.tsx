@@ -184,35 +184,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-light text-gray-900 mb-6">{t('about.title')}</h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                {t('about.description1')}
-              </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                {t('about.description2')}
-              </p>
-              <Link
-                href="/about"
-                className="inline-block px-8 py-3 bg-[#FF6B35] text-white font-medium hover:bg-[#E55A2B] transition-colors"
-              >
-                {t('about.learnMore')}
-              </Link>
-            </div>
-            <div className="bg-gray-100 h-96 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-8xl mb-4">🎨</div>
-                <p className="text-gray-600">{t('about.imageCaption')}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-[#FF6B35] text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
