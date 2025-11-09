@@ -47,7 +47,12 @@ const translations = {
     // All Workshops
     'workshops.title': 'Tất Cả Workshop',
     'workshops.subtitle': 'Khám phá đa dạng các lớp học nghệ thuật truyền thống',
-    
+
+    // Search
+    'search.placeholder': 'Tìm kiếm workshop theo tên, mô tả, địa điểm...',
+    'search.allCategories': 'Tất cả danh mục',
+    'search.noResults': 'Không tìm thấy workshop nào phù hợp',
+
     // About
     'about.title': 'Về CreateX',
     'about.description1': 'CreateX là nền tảng kết nối người học với các nghệ nhân truyền thống Việt Nam. Chúng tôi mang đến những trải nghiệm workshop độc đáo, giúp bạn khám phá và học hỏi các nghệ thuật truyền thống từ những bậc thầy lành nghề.',
@@ -64,7 +69,19 @@ const translations = {
     // Workshop Card
     'workshop.hours': 'giờ',
     'workshop.book': 'Đặt Ngay',
-    
+
+    // Booking Form
+    'booking.title': 'Đặt Lịch Workshop',
+    'booking.customerInfo': 'Thông Tin Khách Hàng',
+    'booking.fullName': 'Họ và Tên',
+    'booking.phone': 'Số Điện Thoại',
+    'booking.numberOfPeople': 'Số Người Tham Gia',
+    'booking.specialRequests': 'Yêu Cầu Đặc Biệt',
+    'booking.total': 'Tổng Cộng',
+    'booking.cancel': 'Hủy',
+    'booking.confirm': 'Xác Nhận Đặt Lịch',
+    'booking.submitting': 'Đang Xử Lý...',
+
     // Footer
     'footer.description': 'Nền tảng kết nối người học với các nghệ nhân truyền thống Việt Nam',
     'footer.links': 'Liên Kết',
@@ -134,7 +151,12 @@ const translations = {
     // All Workshops
     'workshops.title': 'All Workshops',
     'workshops.subtitle': 'Explore diverse traditional art classes',
-    
+
+    // Search
+    'search.placeholder': 'Search workshops by name, description, location...',
+    'search.allCategories': 'All categories',
+    'search.noResults': 'No workshops found',
+
     // About
     'about.title': 'About CreateX',
     'about.description1': 'CreateX is a platform connecting learners with traditional Vietnamese artisans. We bring unique workshop experiences, helping you discover and learn traditional arts from master craftsmen.',
@@ -151,7 +173,19 @@ const translations = {
     // Workshop Card
     'workshop.hours': 'hours',
     'workshop.book': 'Book Now',
-    
+
+    // Booking Form
+    'booking.title': 'Book Workshop',
+    'booking.customerInfo': 'Customer Information',
+    'booking.fullName': 'Full Name',
+    'booking.phone': 'Phone Number',
+    'booking.numberOfPeople': 'Number of People',
+    'booking.specialRequests': 'Special Requests',
+    'booking.total': 'Total',
+    'booking.cancel': 'Cancel',
+    'booking.confirm': 'Confirm Booking',
+    'booking.submitting': 'Processing...',
+
     // Footer
     'footer.description': 'Platform connecting learners with traditional Vietnamese artisans',
     'footer.links': 'Quick Links',

@@ -1,12 +1,15 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import WorkshopCard from '@/components/WorkshopCard';
-import { workshops, featuredWorkshops } from '@/lib/data';
+import { workshops, featuredWorkshops, categories } from '@/lib/data';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Home() {
   const { t, language } = useLanguage();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   return (
     <div className="bg-white">
@@ -124,16 +127,81 @@ export default function Home() {
       {/* All Workshops Section */}
       <section id="all-workshops" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-light text-gray-900 mb-4">{t('workshops.title')}</h2>
             <p className="text-lg text-gray-600">{t('workshops.subtitle')}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {workshops.map(workshop => (
-              <WorkshopCard key={workshop.id} workshop={workshop} />
-            ))}
+          {/* Search and Filter */}
+          <div className="mb-12 max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row gap-4">
+              {/* Search Input */}
+              <div className="flex-1 relative">
+                <input
+                  type="text"
+                  placeholder={t('search.placeholder')}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-5 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent"
+                />
+                <svg
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+
+              {/* Category Filter */}
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent bg-white"
+              >
+                <option value="all">{t('search.allCategories')}</option>
+                {categories.map(category => (
+                  <option key={category} value={category}>{category}</option>
+                ))}
+              </select>
+            </div>
           </div>
+
+          {/* Filtered Workshops */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {workshops
+              .filter(workshop => {
+                const matchesSearch =
+                  workshop.title[language].toLowerCase().includes(searchQuery.toLowerCase()) ||
+                  workshop.description[language].toLowerCase().includes(searchQuery.toLowerCase()) ||
+                  workshop.location[language].toLowerCase().includes(searchQuery.toLowerCase());
+
+                const matchesCategory = selectedCategory === 'all' || workshop.category === selectedCategory;
+
+                return matchesSearch && matchesCategory;
+              })
+              .map(workshop => (
+                <WorkshopCard key={workshop.id} workshop={workshop} />
+              ))
+            }
+          </div>
+
+          {/* No Results Message */}
+          {workshops.filter(workshop => {
+            const matchesSearch =
+              workshop.title[language].toLowerCase().includes(searchQuery.toLowerCase()) ||
+              workshop.description[language].toLowerCase().includes(searchQuery.toLowerCase()) ||
+              workshop.location[language].toLowerCase().includes(searchQuery.toLowerCase());
+
+            const matchesCategory = selectedCategory === 'all' || workshop.category === selectedCategory;
+
+            return matchesSearch && matchesCategory;
+          }).length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">{t('search.noResults')}</p>
+            </div>
+          )}
         </div>
       </section>
 

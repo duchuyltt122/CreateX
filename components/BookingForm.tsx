@@ -1,0 +1,253 @@
+'use client';
+
+import { useState } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
+
+interface BookingFormProps {
+  workshopTitle: string;
+  workshopPrice: number;
+  selectedDate: string;
+  selectedTime: string;
+  onClose: () => void;
+}
+
+export default function BookingForm({ 
+  workshopTitle, 
+  workshopPrice, 
+  selectedDate, 
+  selectedTime,
+  onClose 
+}: BookingFormProps) {
+  const { t, language } = useLanguage();
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    numberOfPeople: 1,
+    specialRequests: ''
+  });
+
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = language === 'vi' ? 'Vui lòng nhập họ tên' : 'Please enter your full name';
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = language === 'vi' ? 'Vui lòng nhập email' : 'Please enter your email';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = language === 'vi' ? 'Email không hợp lệ' : 'Invalid email address';
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = language === 'vi' ? 'Vui lòng nhập số điện thoại' : 'Please enter your phone number';
+    } else if (!/^[0-9]{10,11}$/.test(formData.phone.replace(/\s/g, ''))) {
+      newErrors.phone = language === 'vi' ? 'Số điện thoại không hợp lệ' : 'Invalid phone number';
+    }
+
+    if (formData.numberOfPeople < 1 || formData.numberOfPeople > 10) {
+      newErrors.numberOfPeople = language === 'vi' ? 'Số người từ 1-10' : 'Number of people must be 1-10';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500));
+
+    const totalPrice = workshopPrice * formData.numberOfPeople;
+    
+    alert(
+      language === 'vi' 
+        ? `Đặt lịch thành công!\n\nWorkshop: ${workshopTitle}\nNgày: ${selectedDate}\nGiờ: ${selectedTime}\nKhách hàng: ${formData.fullName}\nSố người: ${formData.numberOfPeople}\nTổng tiền: ${totalPrice.toLocaleString('vi-VN')}₫\n\nChúng tôi sẽ liên hệ với bạn qua email ${formData.email} để xác nhận.`
+        : `Booking successful!\n\nWorkshop: ${workshopTitle}\nDate: ${selectedDate}\nTime: ${selectedTime}\nCustomer: ${formData.fullName}\nPeople: ${formData.numberOfPeople}\nTotal: ${totalPrice.toLocaleString('vi-VN')}₫\n\nWe will contact you via email ${formData.email} for confirmation.`
+    );
+
+    setIsSubmitting(false);
+    onClose();
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
+    }
+  };
+
+  const totalPrice = workshopPrice * formData.numberOfPeople;
+
+  return (
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="sticky top-0 bg-white border-b px-6 py-4 flex items-center justify-between">
+          <h2 className="text-2xl font-bold text-gray-900">
+            {t('booking.title')}
+          </h2>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <form onSubmit={handleSubmit} className="p-6">
+          {/* Workshop Info */}
+          <div className="bg-gray-50 rounded-lg p-4 mb-6">
+            <h3 className="font-semibold text-gray-900 mb-2">{workshopTitle}</h3>
+            <div className="text-sm text-gray-600 space-y-1">
+              <p>📅 {selectedDate}</p>
+              <p>🕐 {selectedTime}</p>
+              <p className="text-[#FF6B35] font-semibold">
+                💰 {workshopPrice.toLocaleString('vi-VN')}₫ / {language === 'vi' ? 'người' : 'person'}
+              </p>
+            </div>
+          </div>
+
+          {/* Customer Information */}
+          <div className="space-y-4">
+            <h3 className="font-semibold text-gray-900 mb-4">{t('booking.customerInfo')}</h3>
+
+            {/* Full Name */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                {t('booking.fullName')} <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleChange}
+                className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35] ${
+                  errors.fullName ? 'border-red-500' : 'border-gray-300'
+                }`}
+                placeholder={language === 'vi' ? 'Nguyễn Văn A' : 'John Doe'}
+              />
+              {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>}
+            </div>
+
+            {/* Email */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Email <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35] ${
+                  errors.email ? 'border-red-500' : 'border-gray-300'
+                }`}
+                placeholder="example@email.com"
+              />
+              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+            </div>
+
+            {/* Phone */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                {t('booking.phone')} <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35] ${
+                  errors.phone ? 'border-red-500' : 'border-gray-300'
+                }`}
+                placeholder="0912345678"
+              />
+              {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
+            </div>
+
+            {/* Number of People */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                {t('booking.numberOfPeople')} <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="number"
+                name="numberOfPeople"
+                value={formData.numberOfPeople}
+                onChange={handleChange}
+                min="1"
+                max="10"
+                className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35] ${
+                  errors.numberOfPeople ? 'border-red-500' : 'border-gray-300'
+                }`}
+              />
+              {errors.numberOfPeople && <p className="text-red-500 text-sm mt-1">{errors.numberOfPeople}</p>}
+            </div>
+
+            {/* Special Requests */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                {t('booking.specialRequests')}
+              </label>
+              <textarea
+                name="specialRequests"
+                value={formData.specialRequests}
+                onChange={handleChange}
+                rows={3}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6B35]"
+                placeholder={language === 'vi' ? 'Yêu cầu đặc biệt (nếu có)...' : 'Special requests (if any)...'}
+              />
+            </div>
+          </div>
+
+          {/* Total Price */}
+          <div className="mt-6 bg-[#FF6B35]/10 rounded-lg p-4">
+            <div className="flex items-center justify-between">
+              <span className="text-gray-700 font-medium">{t('booking.total')}:</span>
+              <span className="text-2xl font-bold text-[#FF6B35]">
+                {totalPrice.toLocaleString('vi-VN')}₫
+              </span>
+            </div>
+            <p className="text-sm text-gray-600 mt-1">
+              {formData.numberOfPeople} × {workshopPrice.toLocaleString('vi-VN')}₫
+            </p>
+          </div>
+
+          {/* Submit Buttons */}
+          <div className="mt-6 flex gap-3">
+            <button
+              type="button"
+              onClick={onClose}
+              className="flex-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              {t('booking.cancel')}
+            </button>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="flex-1 px-6 py-3 bg-[#FF6B35] text-white rounded-lg hover:bg-[#E55A2B] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? t('booking.submitting') : t('booking.confirm')}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+

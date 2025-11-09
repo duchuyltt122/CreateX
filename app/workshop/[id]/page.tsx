@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import { getWorkshopById } from '@/lib/data';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
+import BookingForm from '@/components/BookingForm';
 
 export default function WorkshopDetail() {
   const { language } = useLanguage();
@@ -15,6 +16,7 @@ export default function WorkshopDetail() {
   const [selectedTime, setSelectedTime] = useState('');
   const [activeTab, setActiveTab] = useState<'about' | 'artisan' | 'reviews'>('about');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showBookingForm, setShowBookingForm] = useState(false);
 
   if (!workshop) {
     return (
@@ -31,10 +33,10 @@ export default function WorkshopDetail() {
 
   const handleBooking = () => {
     if (!selectedDate || !selectedTime) {
-      alert('Please select both date and time');
+      alert(language === 'vi' ? 'Vui lòng chọn ngày và giờ' : 'Please select both date and time');
       return;
     }
-    alert(`Booking confirmed for ${workshop.title[language]} on ${selectedDate} at ${selectedTime}`);
+    setShowBookingForm(true);
   };
 
   return (
@@ -321,6 +323,17 @@ export default function WorkshopDetail() {
           </div>
         </div>
       </div>
+
+      {/* Booking Form Modal */}
+      {showBookingForm && (
+        <BookingForm
+          workshopTitle={workshop.title[language]}
+          workshopPrice={workshop.price}
+          selectedDate={selectedDate}
+          selectedTime={selectedTime}
+          onClose={() => setShowBookingForm(false)}
+        />
+      )}
     </div>
   );
 }
