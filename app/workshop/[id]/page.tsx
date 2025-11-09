@@ -14,6 +14,7 @@ export default function WorkshopDetail() {
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const [activeTab, setActiveTab] = useState<'about' | 'artisan' | 'reviews'>('about');
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   if (!workshop) {
     return (
@@ -56,10 +57,64 @@ export default function WorkshopDetail() {
           {/* Main Content */}
           <div className="lg:col-span-2">
             {/* Image Gallery */}
-            <div className="bg-gradient-to-br from-orange-400 to-pink-500 rounded-lg h-96 mb-6 flex items-center justify-center">
-              <div className="text-center text-white">
-                <div className="text-8xl mb-4">🏮</div>
-                <h2 className="text-2xl font-bold">{workshop.title[language]}</h2>
+            <div className="relative bg-gray-900 rounded-lg h-96 mb-6 overflow-hidden group">
+              {/* Main Image */}
+              <img
+                src={workshop.images[currentImageIndex]}
+                alt={`${workshop.title[language]} - Image ${currentImageIndex + 1}`}
+                className="w-full h-full object-cover"
+              />
+
+              {/* Navigation Arrows */}
+              {workshop.images.length > 1 && (
+                <>
+                  <button
+                    onClick={() => setCurrentImageIndex((prev) =>
+                      prev === 0 ? workshop.images.length - 1 : prev - 1
+                    )}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={() => setCurrentImageIndex((prev) =>
+                      prev === workshop.images.length - 1 ? 0 : prev + 1
+                    )}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </>
+              )}
+
+              {/* Image Counter */}
+              <div className="absolute bottom-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+                {currentImageIndex + 1} / {workshop.images.length}
+              </div>
+
+              {/* Thumbnail Navigation */}
+              <div className="absolute bottom-4 left-4 flex gap-2">
+                {workshop.images.map((img, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
+                      index === currentImageIndex
+                        ? 'border-[#FF6B35] scale-110'
+                        : 'border-white/50 hover:border-white'
+                    }`}
+                  >
+                    <img
+                      src={img}
+                      alt={`Thumbnail ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
               </div>
             </div>
 

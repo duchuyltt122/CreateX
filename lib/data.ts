@@ -17,6 +17,7 @@ export interface Workshop {
   };
   category: string;
   image: string;
+  images: string[];
   artisan: {
     name: string;
     bio: {
@@ -52,6 +53,12 @@ export const workshops: Workshop[] = [
     },
     category: 'Weaving',
     image: 'https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80',
+      'https://images.unsplash.com/photo-1558769132-cb1aea3c8565?w=800&q=80',
+      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80',
+      'https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=800&q=80'
+    ],
     artisan: {
       name: 'Võ Thị Lan',
       bio: {
@@ -84,6 +91,12 @@ export const workshops: Workshop[] = [
     },
     category: 'Pottery',
     image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800&q=80',
+      'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80',
+      'https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=800&q=80',
+      'https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?w=800&q=80'
+    ],
     artisan: {
       name: 'Nguyễn Văn Minh',
       bio: {
@@ -116,6 +129,12 @@ export const workshops: Workshop[] = [
     },
     category: 'Painting',
     image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80',
+      'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&q=80',
+      'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&q=80',
+      'https://images.unsplash.com/photo-1596548438137-d51ea5c83ca5?w=800&q=80'
+    ],
     artisan: {
       name: 'Nguyễn Đăng Chế',
       bio: {
@@ -148,6 +167,12 @@ export const workshops: Workshop[] = [
     },
     category: 'Lantern Making',
     image: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80',
+      'https://images.unsplash.com/photo-1583470790878-4a0b42c62cbd?w=800&q=80',
+      'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80',
+      'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80'
+    ],
     artisan: {
       name: 'Trần Thị Hoa',
       bio: {
@@ -180,6 +205,12 @@ export const workshops: Workshop[] = [
     },
     category: 'Culinary',
     image: 'https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=800&q=80',
+      'https://images.unsplash.com/photo-1559314809-0d155014e29e?w=800&q=80',
+      'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=800&q=80',
+      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80'
+    ],
     artisan: {
       name: 'Phạm Thị Mai',
       bio: {
@@ -212,6 +243,12 @@ export const workshops: Workshop[] = [
     },
     category: 'Calligraphy',
     image: 'https://images.unsplash.com/photo-1604869515882-4d10fa4b0492?w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1604869515882-4d10fa4b0492?w=800&q=80',
+      'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80',
+      'https://images.unsplash.com/photo-1609743522653-52354461eb27?w=800&q=80',
+      'https://images.unsplash.com/photo-1516534775068-ba3e7458af70?w=800&q=80'
+    ],
     artisan: {
       name: 'Võ Minh Đức',
       bio: {
@@ -244,6 +281,12 @@ export const workshops: Workshop[] = [
     },
     category: 'Embroidery',
     image: 'https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=800&q=80',
+      'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80',
+      'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&q=80',
+      'https://images.unsplash.com/photo-1556906781-9a412961c28c?w=800&q=80'
+    ],
     artisan: {
       name: 'Lê Thị Hương',
       bio: {
@@ -276,6 +319,12 @@ export const workshops: Workshop[] = [
     },
     category: 'Lacquerware',
     image: 'https://images.unsplash.com/photo-1578926078060-a6c2f1a5e50b?w=800&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1578926078060-a6c2f1a5e50b?w=800&q=80',
+      'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800&q=80',
+      'https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=800&q=80',
+      'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=800&q=80'
+    ],
     artisan: {
       name: 'Đặng Văn Hùng',
       bio: {
