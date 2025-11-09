@@ -13,9 +13,13 @@ export default function WorkshopCard({ workshop }: WorkshopCardProps) {
   return (
     <Link href={`/workshop/${workshop.id}`}>
       <div className="bg-white border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group h-full flex flex-col">
-        {/* Image Placeholder */}
-        <div className="h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
-          <span className="text-7xl group-hover:scale-110 transition-transform">🎨</span>
+        {/* Workshop Image */}
+        <div className="h-56 bg-gray-200 overflow-hidden">
+          <img
+            src={workshop.image}
+            alt={workshop.title[language]}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+          />
         </div>
 
         {/* Content */}
