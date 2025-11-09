@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import SuccessModal from './SuccessModal';
 
 interface BookingFormProps {
   workshopTitle: string;
@@ -11,12 +12,12 @@ interface BookingFormProps {
   onClose: () => void;
 }
 
-export default function BookingForm({ 
-  workshopTitle, 
-  workshopPrice, 
-  selectedDate, 
+export default function BookingForm({
+  workshopTitle,
+  workshopPrice,
+  selectedDate,
   selectedTime,
-  onClose 
+  onClose
 }: BookingFormProps) {
   const { t, language } = useLanguage();
   const [formData, setFormData] = useState({
@@ -29,6 +30,7 @@ export default function BookingForm({
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
@@ -69,15 +71,12 @@ export default function BookingForm({
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
 
-    const totalPrice = workshopPrice * formData.numberOfPeople;
-    
-    alert(
-      language === 'vi' 
-        ? `Đặt lịch thành công!\n\nWorkshop: ${workshopTitle}\nNgày: ${selectedDate}\nGiờ: ${selectedTime}\nKhách hàng: ${formData.fullName}\nSố người: ${formData.numberOfPeople}\nTổng tiền: ${totalPrice.toLocaleString('vi-VN')}₫\n\nChúng tôi sẽ liên hệ với bạn qua email ${formData.email} để xác nhận.`
-        : `Booking successful!\n\nWorkshop: ${workshopTitle}\nDate: ${selectedDate}\nTime: ${selectedTime}\nCustomer: ${formData.fullName}\nPeople: ${formData.numberOfPeople}\nTotal: ${totalPrice.toLocaleString('vi-VN')}₫\n\nWe will contact you via email ${formData.email} for confirmation.`
-    );
-
     setIsSubmitting(false);
+    setShowSuccess(true);
+  };
+
+  const handleSuccessClose = () => {
+    setShowSuccess(false);
     onClose();
   };
 
@@ -247,6 +246,20 @@ export default function BookingForm({
           </div>
         </form>
       </div>
+
+      {/* Success Modal */}
+      {showSuccess && (
+        <SuccessModal
+          workshopTitle={workshopTitle}
+          selectedDate={selectedDate}
+          selectedTime={selectedTime}
+          customerName={formData.fullName}
+          email={formData.email}
+          numberOfPeople={formData.numberOfPeople}
+          totalPrice={totalPrice}
+          onClose={handleSuccessClose}
+        />
+      )}
     </div>
   );
 }
