@@ -9,7 +9,7 @@ interface WorkshopCardProps {
 }
 
 export default function WorkshopCard({ workshop }: WorkshopCardProps) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   return (
     <Link href={`/workshop/${workshop.id}`}>
       <div className="bg-white border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group h-full flex flex-col">
@@ -21,11 +21,11 @@ export default function WorkshopCard({ workshop }: WorkshopCardProps) {
         {/* Content */}
         <div className="p-6 flex-1 flex flex-col">
           <h3 className="text-xl font-medium text-gray-900 mb-3">
-            {workshop.title}
+            {workshop.title[language]}
           </h3>
 
           <p className="text-gray-600 text-sm mb-4 line-clamp-2 leading-relaxed flex-1">
-            {workshop.description}
+            {workshop.description[language]}
           </p>
 
           <div className="flex items-center justify-between mb-4">

@@ -6,7 +6,7 @@ import { workshops, featuredWorkshops } from '@/lib/data';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <div className="bg-white">

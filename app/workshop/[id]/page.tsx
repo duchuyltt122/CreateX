@@ -3,12 +3,14 @@
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import { getWorkshopById } from '@/lib/data';
+import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 
 export default function WorkshopDetail() {
+  const { language } = useLanguage();
   const params = useParams();
   const workshop = getWorkshopById(params.id as string);
-  
+
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const [activeTab, setActiveTab] = useState<'about' | 'artisan' | 'reviews'>('about');
@@ -31,7 +33,7 @@ export default function WorkshopDetail() {
       alert('Please select both date and time');
       return;
     }
-    alert(`Booking confirmed for ${workshop.title} on ${selectedDate} at ${selectedTime}`);
+    alert(`Booking confirmed for ${workshop.title[language]} on ${selectedDate} at ${selectedTime}`);
   };
 
   return (
@@ -46,7 +48,7 @@ export default function WorkshopDetail() {
               </Link>
             </li>
             <li className="text-gray-400">/</li>
-            <li className="text-gray-900 font-medium">{workshop.title}</li>
+            <li className="text-gray-900 font-medium">{workshop.title[language]}</li>
           </ol>
         </nav>
 
@@ -57,7 +59,7 @@ export default function WorkshopDetail() {
             <div className="bg-gradient-to-br from-orange-400 to-pink-500 rounded-lg h-96 mb-6 flex items-center justify-center">
               <div className="text-center text-white">
                 <div className="text-8xl mb-4">🏮</div>
-                <h2 className="text-2xl font-bold">{workshop.title}</h2>
+                <h2 className="text-2xl font-bold">{workshop.title[language]}</h2>
               </div>
             </div>
 
@@ -102,7 +104,7 @@ export default function WorkshopDetail() {
                 {activeTab === 'about' && (
                   <div>
                     <h3 className="text-xl font-bold mb-4">About the Workshop</h3>
-                    <p className="text-gray-700 mb-4">{workshop.description}</p>
+                    <p className="text-gray-700 mb-4">{workshop.description[language]}</p>
                     <div className="grid grid-cols-2 gap-4 mt-6">
                       <div className="flex items-center">
                         <svg className="w-5 h-5 text-orange-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -114,7 +116,7 @@ export default function WorkshopDetail() {
                         <svg className="w-5 h-5 text-orange-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                         </svg>
-                        <span className="text-gray-700">{workshop.location}</span>
+                        <span className="text-gray-700">{workshop.location[language]}</span>
                       </div>
                     </div>
                   </div>
@@ -129,7 +131,7 @@ export default function WorkshopDetail() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-lg">{workshop.artisan.name}</h4>
-                        <p className="text-gray-600 mt-2">{workshop.artisan.bio}</p>
+                        <p className="text-gray-600 mt-2">{workshop.artisan.bio[language]}</p>
                       </div>
                     </div>
                   </div>
