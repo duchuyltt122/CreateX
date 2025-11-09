@@ -47,9 +47,9 @@ export default function WorkshopCard({ workshop }: WorkshopCardProps) {
           <div className="border-t border-gray-200 pt-4 flex items-center justify-between">
             <div>
               <span className="text-2xl font-medium text-gray-900">
-                {(workshop.price / 10000).toFixed(0)}
+                {workshop.price.toLocaleString('vi-VN')}
               </span>
-              <span className="text-sm text-gray-500 ml-1">VND</span>
+              <span className="text-sm text-gray-500 ml-1">₫</span>
             </div>
             <div className="px-6 py-2 bg-[#FF6B35] text-white text-sm font-medium hover:bg-[#E55A2B] transition-colors">
               {t('workshop.book')}

@@ -227,10 +227,18 @@ export default function WorkshopDetail() {
               <h3 className="text-2xl font-bold mb-4">Booking Panel</h3>
               
               <div className="mb-4">
-                <p className="text-3xl font-bold text-orange-500">
-                  Price: {workshop.price.toLocaleString('vi-VN')} VND
+                <div className="flex items-baseline gap-2 mb-2">
+                  <span className="text-3xl font-bold text-[#FF6B35]">
+                    {workshop.price.toLocaleString('vi-VN')}
+                  </span>
+                  <span className="text-xl text-gray-600">₫</span>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  <svg className="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {workshop.duration} {language === 'vi' ? 'giờ' : 'hours'}
                 </p>
-                <p className="text-gray-600">Duration: {workshop.duration} hours</p>
               </div>
 
               <div className="space-y-4">

@@ -45,7 +45,7 @@ export const workshops: Workshop[] = [
       vi: 'Trải nghiệm nghệ thuật dệt lụa truyền thống tại Hội An. Tìm hiểu quy trình từ nuôi tằm đến dệt vải. Bạn sẽ được hướng dẫn bởi các nghệ nhân lành nghề và tự tay tạo ra sản phẩm lụa của riêng mình.',
       en: 'Experience the traditional art of silk weaving in Hoi An. Learn the process from silkworm cultivation to fabric weaving. You will be guided by skilled artisans and create your own silk product.'
     },
-    price: 700000,
+    price: 750000,
     duration: 3,
     location: {
       vi: 'Hội An, Quảng Nam',
@@ -83,7 +83,7 @@ export const workshops: Workshop[] = [
       vi: 'Khám phá nghệ thuật làm gốm truyền thống Đà Nẵng. Tự tay nặn và trang trí sản phẩm gốm của riêng bạn dưới sự hướng dẫn của nghệ nhân. Tìm hiểu về lịch sử và kỹ thuật làm gốm độc đáo của vùng đất này.',
       en: 'Discover the traditional pottery art of Da Nang. Hand-mold and decorate your own ceramic product under the guidance of artisans. Learn about the history and unique pottery techniques of this region.'
     },
-    price: 500000,
+    price: 550000,
     duration: 2.5,
     location: {
       vi: 'Đà Nẵng',
@@ -121,7 +121,7 @@ export const workshops: Workshop[] = [
       vi: 'Học vẽ tranh dân gian Đông Hồ với nghệ nhân. Tìm hiểu về lịch sử, ý nghĩa và kỹ thuật vẽ tranh truyền thống. Tạo ra tác phẩm tranh Đông Hồ độc đáo mang đậm bản sắc văn hóa Việt Nam.',
       en: 'Learn to paint Dong Ho folk paintings with artisans. Discover the history, meaning, and traditional painting techniques. Create your own unique Dong Ho painting rich in Vietnamese cultural identity.'
     },
-    price: 450000,
+    price: 480000,
     duration: 2,
     location: {
       vi: 'Bắc Ninh',
@@ -159,7 +159,7 @@ export const workshops: Workshop[] = [
       vi: 'Học cách làm đèn lồng Hội An truyền thống với nghệ nhân lành nghề. Bạn sẽ được hướng dẫn từng bước để tạo ra chiếc đèn lồng độc đáo của riêng mình và mang về nhà.',
       en: 'Learn how to make traditional Hoi An lanterns with skilled artisans. You will be guided step-by-step to create your own unique lantern and take it home.'
     },
-    price: 400000,
+    price: 420000,
     duration: 2,
     location: {
       vi: 'Hội An, Quảng Nam',
@@ -197,7 +197,7 @@ export const workshops: Workshop[] = [
       vi: 'Học nấu các món ăn Việt Nam truyền thống với đầu bếp chuyên nghiệp. Khám phá hương vị ẩm thực Việt và bí quyết nấu nướng.',
       en: 'Learn to cook traditional Vietnamese dishes with professional chefs. Discover Vietnamese culinary flavors and cooking secrets.'
     },
-    price: 600000,
+    price: 650000,
     duration: 3,
     location: {
       vi: 'Hà Nội',
@@ -235,7 +235,7 @@ export const workshops: Workshop[] = [
       vi: 'Khám phá nghệ thuật thư pháp Việt Nam. Học viết chữ Hán và chữ Nôm với nghệ nhân.',
       en: 'Discover the art of Vietnamese calligraphy. Learn to write Chinese characters and Nom script with artisans.'
     },
-    price: 350000,
+    price: 380000,
     duration: 2,
     location: {
       vi: 'Huế',
@@ -273,7 +273,7 @@ export const workshops: Workshop[] = [
       vi: 'Khám phá nghệ thuật thêu tay Việt Nam với các họa tiết truyền thống. Tạo ra tác phẩm thêu độc đáo của riêng bạn.',
       en: 'Discover Vietnamese hand embroidery art with traditional patterns. Create your own unique embroidered masterpiece.'
     },
-    price: 480000,
+    price: 520000,
     duration: 2.5,
     location: {
       vi: 'Huế',
@@ -311,7 +311,7 @@ export const workshops: Workshop[] = [
       vi: 'Học nghệ thuật sơn mài Việt Nam. Tạo ra tác phẩm sơn mài độc đáo với kỹ thuật truyền thống.',
       en: 'Learn Vietnamese lacquerware art. Create unique lacquer pieces with traditional techniques.'
     },
-    price: 550000,
+    price: 680000,
     duration: 3,
     location: {
       vi: 'Hà Nội',
