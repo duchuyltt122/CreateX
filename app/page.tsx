@@ -20,9 +20,9 @@ export default function Home() {
           <img
             src="https://sf-static.upanhlaylink.com/img/image_202511095e739aabf91be87817d929a854960f9d.jpg"
             alt="Vietnamese Traditional Arts"
-            className="w-full h-full object-cover opacity-20"
+            className="w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-white/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/20 to-white/30"></div>
         </div>
 
         {/* Content */}
